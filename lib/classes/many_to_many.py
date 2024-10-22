@@ -1,11 +1,11 @@
 class Article:
-    all = []
+    all = [] #storing all instances of article
 
     def __init__(self, author, magazine, title):
         self.author = author
         self.magazine = magazine
         self.title = title
-        Article.all.append(self)
+        Article.all.append(self) #append instance on creation
     
     @property
     def title(self):
@@ -19,10 +19,6 @@ class Article:
         else:
             raise ValueError("Title must be a string between 5 and 50 characters.")
     
-   
-
-
-        
 class Author:
     def __init__(self, name):
         if(isinstance(name, str) and len(name) > 0):
@@ -61,8 +57,6 @@ class Author:
             return None
         else:
             return list(set(list_of_categories))
-    
-    
 
 class Magazine:
     all = []
